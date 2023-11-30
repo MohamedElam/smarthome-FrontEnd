@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Mes appareils</h2>
+      <ul class="list-group">
+        <app-appareil *ngFor="let appareil of appareils"
+        [appareilName]="appareil.name" [appareilStatus]="appareil.state" [id]="appareil.id"></app-appareil>
+          </ul>
+      <button class="btn btn-warning btn-lg" [disabled]="isOk" (click)="allumerTous()">Switch All On</button>
+      <button class="btn btn-warning btn-lg" [disabled]="isOk" (click)="eteindreTous()">Switch All Off</button>
+    </div>
+  </div>
+</div>
